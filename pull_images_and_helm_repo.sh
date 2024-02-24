@@ -3,7 +3,7 @@
 #Dir for saving images and helm repos
 mkdir -p image_out
 mkdir -p repo_out
-:> image_list.txt
+:> image_list.out
 
 #Add and fetch helm repo for vault and consul
 helm repo add hashicorp https://helm.releases.hashicorp.com
