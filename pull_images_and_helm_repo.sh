@@ -24,6 +24,6 @@ for image in "${images[@]}"; do
     # Save the image to a tar file on the local disk
     image_name=$(echo "$image" | sed 's|/|_|g' | sed 's/:/_/g')
     docker save -o "./image_out/${image_name}.tar" "$image"
-    echo "${image} ${image_name}.tar"
-    echo "$(date) ${image} saved to image_out/${image_name}.tar"
+    echo "${image} ${image_name}.tar" >> image_list.out
+    echo "$(date) ${image} saved to image_out/${image_name}.tar" 
 done
