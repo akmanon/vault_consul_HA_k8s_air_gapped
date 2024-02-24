@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#Add and fetch helm repo for vault and consul
-helm repo add hashicorp https://helm.releases.hashicorp.com
-helm fetch hashicorp/consul --version 0.28.0
-helm fetch hashicorp/vault --version 0.8.0
-
 :> image_out.txt
 mkdir -p image_out
+
+#Add and fetch helm repo for vault and consul
+helm repo add hashicorp https://helm.releases.hashicorp.com
+helm fetch hashicorp/consul --version 0.28.0 -d ./image_out
+helm fetch hashicorp/vault --version 0.8.0 -d ./image_out
 
 images=(
     "hashicorp/vault-k8s:1.3.1"
