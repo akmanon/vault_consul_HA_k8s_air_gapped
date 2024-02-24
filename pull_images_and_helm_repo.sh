@@ -19,7 +19,7 @@ images=(
 
 for image in "${images[@]}"; do
     # Pull the image from the registry
-    docker pull "$image"
+    docker pull "$image" -q
 
     # Save the image to a tar file on the local disk
     image_name=$(echo "$image" | sed 's|/|_|g' | sed 's/:/_/g')
