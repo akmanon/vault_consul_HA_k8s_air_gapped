@@ -12,8 +12,8 @@ helm fetch hashicorp/vault --version 0.8.0 -d ./repo_out
 
 images=(
     "registry:2.8.2"
-    "hashicorp/vault-k8s:1.3.1"
-    "hashicorp/vault:1.15.2"
+    "hashicorp/vault-k8s:0.6.0"
+    "vault:1.5.4"
     "hashicorp/consul:1.9.1"
 )
 
